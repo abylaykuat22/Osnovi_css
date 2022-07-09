@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    KZT = parseInt(prompt("Insert money(KZT)"))
+    if (KZT % 380 !== 0) {
+        dol = parseInt(KZT / 380);
+        temp = parseInt((KZT % 380) / 380 * 100);
+
+        alert(dol + " " + "USD" + " " + temp + " " + "cents")
+    } else {
+        alert("ONLY" + " " + (KZT / 380) + " " + "USD")
+    }
+
+
+</script>
+</html>

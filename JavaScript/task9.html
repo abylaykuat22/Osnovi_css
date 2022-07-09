@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    KZT = parseInt(prompt("INSERT YOUR AMOUNT IN KZT:"))
+    choose = parseInt(prompt(
+        "1 - CONVERT TO USD\n" +
+        "2 - CONVERT TO EUR\n" +
+        "3 - CONVERT TO GBP")
+    )
+    USD = 380;
+    EUR = 430;
+    GBP = 480;
+
+
+    if (choose === 1) {
+        alert(KZT + "KZT" + "=" + ((KZT / USD).toFixed(2)) + "USD")
+    }
+    else if (choose === 2) {
+        alert(KZT + "KZT" + "=" + ((KZT / EUR).toFixed(2)) + "EUR")
+    }
+    if (choose === 2) {
+        alert(KZT + "KZT" + "=" + ((KZT / EUR).toFixed(2)) + "EUR")
+    }
+    else{
+        alert(KZT + "KZT"+"="+((KZT/GBP).toFixed(2))+"GBP")
+    }
+
+</script>
+</html>

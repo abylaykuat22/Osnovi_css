@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    choose = parseInt(prompt(
+        "Choose your branch: \n" +
+        "1 - Science \n" +
+        "2 - Humanitarian subjects \n" +
+        "3 - Art \n" +
+        "4 - Sport"))
+
+    if (choose === 1) {
+        parseInt(prompt(
+            "1 - Math \n" +
+            "2 - Physics \n"
+        ))
+        if (choose === 1) {
+            alert("You are Financier")
+        } else {
+            alert("You are Engineer")
+        }
+    } else if (choose === 2) {
+        parseInt(prompt(
+            "1 - History \n" +
+            "2 - Foreign Languages \n"
+        ))
+        if (choose === 1) {
+            alert("You are Historic or Diplomat ")
+        } else {
+            alert("You are Translator")
+        }
+    } else if (choose === 3) {
+        parseInt(prompt(
+            "Drawing\n" +
+            "Singing \n"
+        ))
+        if (choose === 1) {
+            alert("You are Painter or Architect")
+        } else {
+            alert("You are Singer or Tamada")
+        }
+    } else {
+        parseInt(prompt(
+            "Team \n" +
+            "Individual \n"
+        ))
+        if (choose === 1) {
+            alert("You are footballer or Basketball player")
+        } else {
+            alert("You are boxer or tennis player")
+        }
+    }
+
+</script>
+</html>
