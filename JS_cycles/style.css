@@ -1,0 +1,40 @@
+body {
+
+}
+
+.container {
+    width: 60%;
+    background-color: #eaeaea;
+    margin: 0 auto;
+    min-height: 1500px;
+}
+
+
+
+.form {
+
+    padding: 20px;
+
+}
+
+.qwe {
+    display: flex;
+    justify-content: center;
+}
+
+
+.btn {
+    margin: 20px;
+    display: inline-block;
+    background-color: #6f6ffd;
+    color:white;
+    padding: 15px 44px 15px 44px;
+
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hr{
+    color: white;
+    width: 100%;
+}

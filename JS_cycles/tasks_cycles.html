@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div id="crossing">
+
+
+        <form class="form">
+
+            1. Создайте программу, в которой мы сначала вводим число n, затем n элементов и сохраняем все введенные
+            числа в
+            массив. Выведите в конце все элементы в обратном порядке.
+            <div class="qwe">
+                <a class="btn" onclick="task1()">Проверить</a>
+            </div>
+
+            <hr class="hr">
+
+
+            2. Создайте программу, в которой мы сначала вводим число n, затем n элементов и сохраняем все введенные
+            числа в
+            массив. Выведите в конце максимальный элемент из массива.
+            <div class="qwe">
+                <a class="btn" onclick="task2()">Проверить</a>
+            </div>
+            <hr class="hr">
+
+            3. Создайте программу, в которой мы сначала вводим число n, затем n элементов и сохраняем все введенные
+            числа в
+            массив. Выведите в конце сумму и среднее значение всех чисел из массива.
+            <div class="qwe">
+                <a class="btn" onclick="task3()">Проверить</a>
+            </div>
+            <hr class="hr">
+
+            4. Создайте программу, в которой мы сначала вводим число n, затем n элементов и сохраняем все введенные
+            числа в
+            массив. Выведите в конце квадраты всех введенных чисел.
+            <div class="qwe">
+                <a class="btn" onclick="task4()">Проверить</a>
+            </div>
+            <hr class="hr">
+
+            5. Создайте программу, в которой мы храним список всех пользователей (логин и пароль) в виде массива. При
+            запуске браузера у юзера запрашивают логин и пароль. Если существует такой пользователь в массиве, то юзер
+            должен получит сообщение в браузере: "Welcome, you are authenticated", но если такого пользователя не
+            существует, то выведите сообщение: "User not found". *** Используйте двумерный ассоциативный массив для
+            хранения
+            пользователей в массиве. Пример: users = [ {"login":"ilyas", "password": "qwerty"}, {"login":"eldar",
+            "password": "qqqqq"}, {"login":"assylkhan", "password": "qweqwe"}, {"login":"anel", "password": "asdasd"},
+            {"login":"alibek", "password": "aaaaaa"} ];
+            <div class="qwe">
+                <a class="btn" onclick="task5()">Проверить</a>
+            </div>
+            <hr class="hr">
+
+            6. Создайте простую программу, в которой мы делаем поиск по автору книги. У меня имеется массив книг, у
+            которых
+            есть такие параметры как: Наименование Автор ISBN Цена Делаем мы поиск по наименованию. Все книги заранее
+            записаны в массив (можете смело добавлять свои любимые книги в произвольном порядке).
+            { "name": "Harry Potter and the Philosopher's Stone", "author": "Joanne Rowling", "ISBN": "1233123",
+            "price":
+            "50$" }, {"name": "The Chimp Paradox", "author": "Steve Peters", "ISBN": "9785457672246", "price": "15$"},
+            {"name": "The Idiot", "author": "Fyodor Dostoevsky", "ISBN": " 9785448426186", "price": "40$"}, { "name":
+            "The
+            Richest Man in Babylon", "author": "George Samuel Clason", "ISBN": " 1505339111", "price": "49" }
+            <div class="qwe">
+                <a class="btn" onclick="task6()">Проверить</a>
+            </div>
+        </form>
+
+    </div>
+
+    <script>
+
+        function task1() {
+            n = parseInt(prompt("Введите число: "));
+            arr = [];
+
+            for (let i = 0; i < n; i++) {
+                arr.push(parseInt(prompt()));
+            }
+            alert(arr.reverse());
+        }
+
+        function task2() {
+            n = parseInt(prompt("Введите число: "));
+            arr = [];
+            max = 0;
+            for (let i = 0; i < n; i++) {
+                arr.push(parseInt(prompt()));
+            }
+            for (let i = 0; i < n; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+            alert(max);
+        }
+
+        function task3() {
+            n = parseInt(prompt("Введите число: "))
+            arr = [];
+            sum = 0;
+
+            count = 0;
+
+            for (let i = 0; i < n; i++) {
+                arr.push(parseInt(prompt()))
+            }
+            for (let i = 0; i < n; i++) {
+                sum += arr[i];
+                count++;
+            }
+            alert("SUM: " + sum + " " + "MEAN: " + sum / count)
+        }
+
+        function task4() {
+            n = parseInt(prompt("Введите число: "))
+            arr = [];
+            kv = [];
+            for (let i = 0; i < n; i++) {
+                arr.push(parseInt(prompt()))
+            }
+            for (let i = 0; i < n; i++) {
+                kv.push(arr[i] ** 2);
+            }
+            alert(kv)
+        }
+
+        function task5() {
+            login = prompt("Insert login: ")
+            password = prompt("Insert password: ")
+            users = [
+
+                {"login": "ilyas", "password": "qwerty"},
+
+                {"login": "eldar", "password": "qqqqq"},
+
+                {"login": "assylkhan", "password": "qweqwe"},
+
+                {"login": "anel", "password": "asdasd"},
+
+                {"login": "alibek", "password": "aaaaaa"}
+
+            ];
+
+            flag = false;
+
+            for (var i = 0; i < users.length; i++) {
+                if (login === users[i]["login"] && password === users[i]["password"]) {
+                    flag = true;
+                }
+            }
+            if (flag) {
+                alert("Welcome, you are authenticated")
+            } else {
+                alert("User not found")
+            }
+        }
+
+        function task6() {
+            author = prompt("Insert author: ")
+            books = [
+                {
+                    "name": "Harry Potter and the Philosopher's Stone",
+                    "author": "Joanne Rowling",
+                    "ISBN": "1233123",
+                    "price": "50$"
+                },
+                {"name": "The Chimp Paradox", "author": "Steve Peters", "ISBN": "9785457672246", "price": "15$"},
+                {"name": "The Idiot", "author": "Fyodor Dostoevsky", "ISBN": " 9785448426186", "price": "40$"},
+                {
+                    "name": "The Richest Man in Babylon",
+                    "author": "George Samuel Clason",
+                    "ISBN": " 1505339111",
+                    "price": "49"
+                }
+            ]
+
+            index = 0;
+            for (var i = 0; i < books.length; i++) {
+                if (author === books[i]["author"]) {
+                    index = i;
+                }
+            }
+            if (index) {
+                alert(books[index]["name"] + " - " + books[index]["author"] + " - " + books[index]["ISBN"] + " - " + books[index]["price"])
+            } else {
+                alert("The book is missing")
+            }
+        }
+
+        document.getElementById("control").onclick = function () {
+            document.getElementById("crossing").classList.toggle("expand")
+        }
+    </script>
+</div>
+</body>
+
+</html>
+
+
